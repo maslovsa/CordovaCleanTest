@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.rokolabs.cordova.test" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <preference name="loglevel" value="DEBUG" />
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="LoggerManager">
+        <param name="android-package" value="com.rokolabs.rokomobi.analytics.RMLoggerManager" />
+    </feature>
+    <feature name="PortalManager">
+        <param name="android-package" value="com.rokolabs.rokomobi.PortalManager" />
+    </feature>
+    <feature name="PushManager">
+        <param name="android-package" value="com.rokolabs.rokomobi.push.PushPlugin" />
+    </feature>
+    <feature name="LinkManager">
+        <param name="android-package" value="com.rokolabs.rokomobi.link.LinkManager" />
+    </feature>
+    <feature name="ShareManager">
+        <param name="android-package" value="com.rokolabs.rokomobi.share.ShareManager" />
+    </feature>
+    <feature name="PromoManager">
+        <param name="android-package" value="com.rokolabs.rokomobi.promo.PromoManager" />
+    </feature>
+    <feature name="ReferralManager">
+        <param name="android-package" value="com.rokolabs.rokomobi.referral.ReferralManager" />
+    </feature>
+    <allow-intent href="market:*" />
+    <name>HelloCordova</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+</widget>

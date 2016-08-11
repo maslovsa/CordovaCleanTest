@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Hello World</title>
+    </head>
+    <body>
+        <!-- <div class="app">
+            <h1>Apache Cordova</h1>
+            
+                
+            </div>
+        </div> -->
+        <div id="deviceready" class="blink">
+            <p class="event received">Device is Ready</p>
+            <p class="event listening">Connecting to Device</p>
+        </div>
+        <div>
+            <p>
+            <input type="text" id="inUserName" placeholder="userName" size="7">
+            <input type="text" id="inReferralCode" placeholder="referralCode" size="7">
+            <input type="text" id="inShareChannel" placeholder="shareChannel" size="7">
+                <button id="setUser">Set User</button>
+            </p>
+            <p>
+            <!-- "userName", "email", "password", OPTIONAL: "ambassadorCode", "linkShareChannel" -->
+                <input type="text" id="inLogin" placeholder="login" size="7">
+                <input type="text" id="inPassword" placeholder="password" size="7">
+                <input type="text" name="inEmail" placeholder="e-mail" size="7">
+                <input type="text" name="inAmbassadorCode" placeholder="ambassadorCode" size="7">
+                <input type="text" name="inLinkShareChannel" placeholder="linkShareChannel" size="7">
+                <button id="signUp">SignUp User</button>
+            </p>
+            <p>
+                <input type="text" id="inLoginLogin" placeholder="login" size="7">
+                <input type="text" id="inLoginPassword" placeholder="password" size="7">
+                <button id="login">Login</button>
+            </p>
+            <p>
+                <button id="logout">Logout</button>
+            </p>
+            <p>
+                <input type="text" id="inCreateLinkName" placeholder="name" size="7">
+                <select id="inLinkType" >
+                    <option value="0">ROKOLinkTypeManual</option>
+                    <option value="1">ROKOLinkTypePromo</option>
+                    <option value="2">ROKOLinkTypeReferral</option>
+                    <option value="3">ROKOLinkTypeShare</option>
+                </select>
+                <input type="text" id="inSourceUrl" placeholder="sourceUrl" size="7">
+                <input type="text" id="inChannelName" placeholder="channelName" size="7">
+                <input type="text" id="inSharingCode" placeholder="sharingCode" size="7">
+            </p>
+            <p>
+                <!-- // Param - "name", "type"(ROKOLinkType), "sourceURL", "channelName", "sharingCode", "advancedSettings", Success - "linkURL", "linkId" -->
+                
+                <button id="createLink">Create Link</button>
+            </p>
+            <p>
+            <input type="text" id="inShareContentIDWithUI" placeholder="shareChannel" size="7">
+                <button id="shareWithUI">Share with ui</button>
+            </p>
+            <p>
+                <input type="text" id="inShareChannel" placeholder="shareChannel" size="7">
+                <input type="text" id="inContentId" placeholder="contentID" size="7">
+                <button id="shareCompleteForChannel">Share complete for channel</button>
+            </p>
+            <p>
+                <input type="text" id="inEventName" placeholder="eventName" size="7">
+                <input type="text" id="inParamName" placeholder="paramName" size="7">
+                <input type="text" id="inParamValue" placeholder="paramValue" size="7">
+                <button id="addEvent">Add event</button>
+            </p>
+            <p>
+                <input type="text" id="inPromoCodeLoadPromo" placeholder="promoCode" size="7">
+                <button id="loadPromo">Load promo</button>
+            </p>
+            <p>
+                <input type="text" id="inMarkPromoCodeAsUsed" placeholder="promoCode" size="7">
+                <input type="text" id="inValueOfPurchase" size="7" placeholder="valueOfPurchase">
+                <input type="text" id="inValueOfDiscount"   size="7" placeholder="valueOfDiscount">
+                <select id="inPromoDeliveryType">
+                    <option value="0">ROKOPromoDeliveryTypeUnknown</option>
+                    <option value="1">ROKOPromoDeliveryTypePush</option>
+                    <option value="2">ROKOPromoDeliveryTypeEvent</option>
+                    <option value="3">ROKOPromoDeliveryTypeLink</option>
+                </select>
+                <button id="markPromoCodeAsUsed">Mark promocode as used</button>
+            </p>
+            <p>
+                <input type="text" id="inDiscountId" placeholder="discountId" size="7">
+                <button id="markReferralDiscountAsUsed">Mark referral discount as used</button>
+            </p>
+            <p>
+                <button id="loadReferralDiscountsList">Load referral discounts list</button>
+            </p>
+            <p>
+                <input type="text" id="inDiscountCode" size="15" placeholder="code">
+            </p>
+            <p>
+                <button id="loadDiscountInfoWithCode">Load discount info with code</button>
+                <button id="activateDiscountWithCode">Activate discount with code</button>
+                <button id="completeDiscountWithCode">Complete discount with code</button>
+            </p>
+            <p>
+                <button id="inviteFriends">Invite friends</button>
+            </p>
+            <br>
+            <br>
+            <br>
+            
+            <p>
+                <button id="getPortalInfo">Get portal info</button>
+                <button id="getSessionInfo">Get session info</button>
+                <button id="getUserInfo">Get user info</button>
+            </p>
+        </div>
+            
+        </button>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/widget": [
+                        {
+                            "xml": "<feature name=\"LinkManager\"><param name=\"ios-package\" value=\"RMPLinkManager\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"ShareManager\"><param name=\"ios-package\" value=\"RMPShareManager\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"LoggerManager\"><param name=\"ios-package\" value=\"RMPLoggerManager\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"PromoManager\"><param name=\"ios-package\" value=\"RMPPromoManager\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"ReferralManager\"><param name=\"ios-package\" value=\"RMPReferralManager\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"PortalManager\"><param name=\"ios-package\" value=\"RMPPortalManager\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"PushManager\"><param name=\"ios-package\" value=\"RMPPushManager\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "com.rokolabs.rokomobi": {
+            "PACKAGE_NAME": "com.rokolabs.cordova.test"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "id": "com.rokolabs.rokomobi.rokomobi",
+            "file": "plugins/com.rokolabs.rokomobi/www/rokomobi.js",
+            "pluginId": "com.rokolabs.rokomobi",
+            "clobbers": [
+                "rokomobi"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-whitelist": "1.2.2",
+        "com.rokolabs.rokomobi": "0.0.1"
+    }
+}
